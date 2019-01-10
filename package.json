@@ -1,0 +1,62 @@
+{
+  "name": "ccqp",
+  "version": "0.1.0",
+  "description": "camelcase query params express middleware",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monojack/ccqp.git"
+  },
+  "keywords": [
+    "javascript",
+    "express",
+    "middleware",
+    "camelcase",
+    "query",
+    "params"
+  ],
+  "author": "Ionut Achim <achimvionut@gmail.com>",
+  "license": "MIT",
+  "main": "lib/ccqp.cjs.js",
+  "module": "esm/ccqp.esm.js",
+  "devDependencies": {
+    "@babel/core": "7.1.2",
+    "@babel/preset-env": "7.1.0",
+    "ava": "0.25.0",
+    "eslint": "5.6.1",
+    "eslint-config-mono": "2.0.0",
+    "express": "4.16.4",
+    "rollup": "0.67.1",
+    "rollup-plugin-babel": "4.0.3",
+    "rollup-plugin-node-resolve": "3.4.0",
+    "rollup-plugin-replace": "2.1.0",
+    "rollup-plugin-size-snapshot": "0.7.0",
+    "rollup-plugin-terser": "3.0.0",
+    "supertest": "3.3.0"
+  },
+  "bugs": {
+    "url": "https://github.com/monojack/ccqp/issues"
+  },
+  "scripts": {
+    "rollup": "rollup -c",
+    "dev": "npm run build:esm -- -w",
+    "pretest": "npm run build:cjs",
+    "test": "ava --verbose --serial",
+    "build:esm": "rollup -c rollup.config.esm.js",
+    "build:cjs": "rollup -c rollup.config.cjs.js",
+    "build": "npm run rollup",
+    "prepare": "npm run clean && npm run build",
+    "clean": "rimraf lib esm dist"
+  },
+  "ava": {
+    "files": [
+      "test/*.js",
+      "!test/mocks/**"
+    ]
+  },
+  "npmName": "ccqp",
+  "files": [
+    "dist",
+    "esm",
+    "lib"
+  ]
+}

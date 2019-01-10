@@ -1,0 +1,26 @@
+{
+  "dist/ccqp.umd.js": {
+    "bundled": 881,
+    "minified": 451,
+    "gzipped": 294
+  },
+  "lib/ccqp.cjs.js": {
+    "bundled": 622,
+    "minified": 445,
+    "gzipped": 271
+  },
+  "esm/ccqp.esm.js": {
+    "bundled": 607,
+    "minified": 432,
+    "gzipped": 264,
+    "treeshaked": {
+      "rollup": {
+        "code": 298,
+        "import_statements": 0
+      },
+      "webpack": {
+        "code": 1264
+      }
+    }
+  }
+}
